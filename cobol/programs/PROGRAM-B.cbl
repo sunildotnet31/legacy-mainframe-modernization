@@ -1,0 +1,18 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. PROGRAM-B.
+* Customer eligibility and account lookup before payment calculation.
+* BUSINESS RULE: Customer must be active before payment processing.
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 WS-CUSTOMER-ID PIC X(10).
+PROCEDURE DIVISION.
+    EXEC SQL
+       SELECT CUSTOMER_ID, STATUS
+         INTO :WS-CUSTOMER-ID, :WS-STATUS
+         FROM CUSTOMER_TABLE
+        WHERE CUSTOMER_ID = :WS-CUSTOMER-ID
+    END-EXEC.
+    IF WS-STATUS = 'ACTIVE'
+       CALL 'PROGRAM-C' USING WS-CUSTOMER-ID
+    END-IF.
+    STOP RUN.

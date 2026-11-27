@@ -1,0 +1,4 @@
+       01 CUSTOMER-RECORD.
+          05 CUSTOMER-ID PIC X(10).
+          05 CUSTOMER-STATUS PIC X(8).
+          05 CUSTOMER-NAME PIC X(40).

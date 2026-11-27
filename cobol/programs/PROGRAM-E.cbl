@@ -1,0 +1,7 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. PROGRAM-E.
+* Customer master extract for downstream reporting.
+PROCEDURE DIVISION.
+    OPEN INPUT CUSTOMER-INPUT.
+    CALL 'PROGRAM-B'.
+    STOP RUN.

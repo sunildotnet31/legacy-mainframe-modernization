@@ -1,0 +1,3 @@
+Modernization discovery notes
+
+Payment processing is a batch-oriented business capability. Candidate service boundaries should be evaluated around customer validation, payment calculation, account reconciliation and reporting. Preserve batch ordering, data contracts, auditability and reconciliation controls.
