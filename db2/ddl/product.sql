@@ -1,0 +1,9 @@
+CREATE TABLE PRODUCT (
+  PRODUCT_ID           CHAR(8)          NOT NULL,
+  PRODUCT_NAME         CHAR(60)         NOT NULL,
+  PRODUCT_TYPE         CHAR(2)          NOT NULL,
+  CURRENCY_CODE        CHAR(3)          NOT NULL,
+  MIN_BALANCE          DECIMAL(13,2)    NOT NULL,
+  PRODUCT_STATUS       CHAR(1)          NOT NULL,
+  PRIMARY KEY (PRODUCT_ID)
+);

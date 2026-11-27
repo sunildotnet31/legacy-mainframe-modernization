@@ -1,0 +1,11 @@
+*.log
+*.lis
+*.lst
+*.obj
+*.dll
+*.exe
+*.class
+*.pyc
+.env
+.venv/
+__pycache__/
